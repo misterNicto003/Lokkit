@@ -7,7 +7,6 @@ import { postsData } from '../postData';
 })
 export class PostService {
   public posts: Post[] = postsData;
-  public post!: Post | undefined;
 
   constructor() {}
 }

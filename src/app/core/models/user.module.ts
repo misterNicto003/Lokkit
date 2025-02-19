@@ -6,4 +6,5 @@ export interface User {
   avatar: string;
   gender: 'male' | 'female';
   role: 'admin' | 'user';
+  isActive: boolean;
 }
