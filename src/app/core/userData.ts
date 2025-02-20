@@ -10,6 +10,7 @@ export const usersData: User[] = [
       'https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png',
     gender: 'male',
     role: 'admin',
+    isActive: false,
   },
   {
     _id: 456,
@@ -20,6 +21,7 @@ export const usersData: User[] = [
       'https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png',
     gender: 'male',
     role: 'user',
+    isActive: false,
   },
   {
     _id: 789,
@@ -30,6 +32,7 @@ export const usersData: User[] = [
       'https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png',
     gender: 'male',
     role: 'user',
+    isActive: true,
   },
   {
     _id: 101112,
@@ -40,6 +43,7 @@ export const usersData: User[] = [
       'https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png',
     gender: 'male',
     role: 'user',
+    isActive: false,
   },
   {
     _id: 131415,
@@ -50,6 +54,7 @@ export const usersData: User[] = [
       'https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png',
     gender: 'female',
     role: 'user',
+    isActive: false,
   },
   {
     _id: 161718,
@@ -60,5 +65,6 @@ export const usersData: User[] = [
       'https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png',
     gender: 'female',
     role: 'user',
+    isActive: false,
   },
 ];

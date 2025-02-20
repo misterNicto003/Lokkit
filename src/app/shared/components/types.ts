@@ -12,8 +12,11 @@ export type iconTypes =
   | 'BookmarkSimple'
   | 'DotsThreeOutlineVertical'
   | 'HouseSimple'
-  | 'Monotone add (1)'
+  | 'Send'
   | 'Monotone add (2)'
   | 'Monotone add (3)'
   | 'ShareFat'
-  | 'ThumbsUp';
+  | 'ThumbsUp'
+  | 'ChatDots'
+  | 'BookmarkSimple'
+  | 'DotsVertical';
