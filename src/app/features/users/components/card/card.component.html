@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card__logo">
+    <img src="{{ user.avatar }}" alt="" />
+    <div class="card__info">
+      <p>{{ user.name }}</p>
+      <span>{{ user.userName }}</span>
+    </div>
+  </div>
+  <div class="card__btn">
+    <button (click)="getActiveUser()">Follow</button>
+    <app-icon [icon]="'Plus'" />
+  </div>
+</div>

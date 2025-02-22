@@ -8,5 +8,15 @@ import { postsData } from '../postData';
 export class PostService {
   public posts: Post[] = postsData;
 
-  constructor() {}
+  getPosts() {
+    this.posts = postsData;
+  }
+
+  likePost(postId: number) {
+    this.posts = this.posts.map((post) =>
+      post._id === postId ? { ...post, likes: post.likes + 1 } : post
+    );
+
+    console.log(this.posts);
+  }
 }

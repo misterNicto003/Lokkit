@@ -19,4 +19,6 @@ export type iconTypes =
   | 'ThumbsUp'
   | 'ChatDots'
   | 'BookmarkSimple'
-  | 'DotsVertical';
+  | 'DotsVertical'
+  | 'AvataUser'
+  | 'Plus';

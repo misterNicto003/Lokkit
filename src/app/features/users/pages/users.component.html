@@ -1,0 +1,7 @@
+<div class="users">
+  <h1>Users</h1>
+  @for(user of userService.users; track user._id){
+  <app-card [user]="user" />
+
+  }
+</div>
