@@ -1,11 +1,15 @@
 import { Component, inject, Input } from '@angular/core';
 import { Post } from '../../../../core/models/post.models';
-import { IconComponent } from '../../../../shared/components/icons/icon.component';
 import { CommonModule } from '@angular/common';
-import { CutTextPipe } from '../../../../shared/pipes/cut-text.pipe';
 import { PostService } from '../../../../core/services/post.service';
-import { HighlightDirective } from '../../../../shared/directives/highlight.directive';
-import { AppShowDirective } from '../../../../shared/directives/app-show-if-liked.directive';
+import {
+  AppShowDirective,
+  CutTextPipe,
+  HighlightDirective,
+  IconComponent,
+  RelativeDatePipe,
+  UserNamePipePipe,
+} from '../../../../shared/shared';
 
 @Component({
   selector: 'app-post',
@@ -13,8 +17,10 @@ import { AppShowDirective } from '../../../../shared/directives/app-show-if-like
     IconComponent,
     CommonModule,
     CutTextPipe,
+    RelativeDatePipe,
     HighlightDirective,
     AppShowDirective,
+    UserNamePipePipe,
   ],
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss',
@@ -22,7 +28,7 @@ import { AppShowDirective } from '../../../../shared/directives/app-show-if-like
 export class PostComponent {
   @Input() post!: Post;
 
-  showComment = true;
+  showComment = false;
 
   private postService = inject(PostService);
 

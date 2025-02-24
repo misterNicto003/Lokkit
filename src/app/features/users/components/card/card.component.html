@@ -10,4 +10,8 @@
     <button (click)="getActiveUser()">Follow</button>
     <app-icon [icon]="'Plus'" />
   </div>
+  <div *ngIf="showUser" class="card__btn--funfollow">
+    <button>Follow</button>
+    <app-icon [icon]="'Plus'" />
+  </div>
 </div>

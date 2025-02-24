@@ -21,4 +21,5 @@ export type iconTypes =
   | 'BookmarkSimple'
   | 'DotsVertical'
   | 'AvataUser'
-  | 'Plus';
+  | 'Plus'
+  | 'AvatarPost';

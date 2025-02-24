@@ -3,6 +3,7 @@ import { UserService } from '../../../../core/services/user.service';
 import { CommonModule } from '@angular/common';
 import { User } from '../../../../core/models/user.module';
 import { IconComponent } from '../../../../shared/components/icons/icon.component';
+import { usersData } from '../../../../core/userData';
 
 @Component({
   selector: 'app-card',
@@ -13,7 +14,6 @@ import { IconComponent } from '../../../../shared/components/icons/icon.componen
 export class CardComponent implements OnInit {
   @Input() user!: User;
 
-  showUser = true;
   // userService = inject(UserService);
 
   // users = this.userService.users;
@@ -23,8 +23,4 @@ export class CardComponent implements OnInit {
   // }
 
   ngOnInit(): void {}
-
-  getActiveUser() {
-    this.showUser = !this.showUser;
-  }
 }
