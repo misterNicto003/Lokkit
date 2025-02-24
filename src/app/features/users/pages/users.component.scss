@@ -1,0 +1,13 @@
+.users {
+  & h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 24px;
+    letter-spacing: -0.8%;
+    margin-bottom: 34px;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+}

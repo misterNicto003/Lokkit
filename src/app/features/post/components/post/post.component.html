@@ -1,4 +1,4 @@
-<div class="post">
+<div [appHighlight]="'#fff'" class="post">
   <div class="post__header">
     <div class="post__author">
       <div class="post__avatar">
@@ -29,13 +29,15 @@
     <div class="post__actions">
       <div class="post__interaction">
         <div class="post__likes">
-          <button class="post__button">
+          <button (click)="likePost(post._id)" class="post__button">
             <app-icon [icon]="'ThumbsUp'"></app-icon>
           </button>
-          <span class="post__likes-count">{{ post.likes }} Likes</span>
+          <span *appShowDirective="post.likes" class="post__likes-count"
+            >{{ post.likes }} Likes</span
+          >
         </div>
 
-        <button class="post__button">
+        <button (click)="toggleComments()" class="post__button">
           <div class="post__comments">
             <app-icon [icon]="'ChatDots'"></app-icon>
             <span class="post__comments-count"
@@ -51,6 +53,12 @@
       </div>
 
       <app-icon class="post__bookmark" [icon]="'BookmarkSimple'"></app-icon>
+    </div>
+
+    <div *ngIf="showComment">
+      <h1>12321</h1>
+      <h1>12321</h1>
+      <h1>12321</h1>
     </div>
   </div>
 

@@ -1,0 +1,67 @@
+.card {
+  max-width: 691px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 8px;
+
+  background: var(--white-color);
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    & img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+
+  &__info {
+    & p {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    & span {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22.4px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--purple-color);
+    padding: 7px 22px;
+    border-radius: 1234px;
+
+    & button {
+      color: var(--white-color);
+
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &--funfollow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--background2);
+      color: var(--red-color);
+      padding: 7px 22px;
+      border-radius: 1234px;
+
+      & img {
+        color: var(--red-color);
+      }
+    }
+  }
+}
