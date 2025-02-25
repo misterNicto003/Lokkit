@@ -4,12 +4,19 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'userNamePipe',
 })
 export class UserNamePipePipe implements PipeTransform {
-  transform(value: string, ...args: unknown[]): unknown {
-    const username = 'abubakr';
+  transform(value: string): unknown {
+    const username = {
+      userName: 'abubakr',
+      description: 'frontender',
+    };
 
     if (!value) {
-      return username;
+      return username.userName;
     }
+    if (!value) {
+      return username.description;
+    }
+
     return value;
   }
 }

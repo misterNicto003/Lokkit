@@ -5,12 +5,10 @@ export const postsData: Post[] = [
     _id: 1234,
     authorId: 123,
     name: '',
-    description: 'Product Designer, slothUI',
-
+    description: '',
     title: 'О природе',
     avatarImg:
       'https://s3-alpha-sig.figma.com/img/b858/1a3a/8f9a19b6eec05845c18e07081f487330?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q321w6y7NoHbOiCIw2IDkJlJDO~xgpWmPph87uayarE1ji93D0MBUudIPedGlQjNPfVefvmSXbzOhH5m9JGFxsxsV0SyYcgjI5KydN4WrUrNWWp9zdoAk5ZlSZ~1PMZwaEvWmcw945n6RXly5WBT5Lk4RzIkGmPBgdSyxP6aV3zA6BA28mEzID--Y5E203lwXXeTIJmseY~ID9AIPxoXdpwxPptHZWNTVmw00OmyM68ohzV3Lqgv~FDkeGln6FiW0yZEdhHolbTlZR8Rz8e3wRTK5px4M8BoE~YFkt0kbKWsYSH-2f9Xj70wm0jDRb9MD8mORS7MPJjYHAFpmhZ59g__',
-
     content:
       'Природа — это величайший источник вдохновения для человека. Горы, леса, реки и океаны дарят нам не только красоту, но и жизненно важные ресурсы. Забота о природе — это обязанность каждого, ведь только так мы сможем сохранить планету для будущих поколений.',
     image:
@@ -25,18 +23,16 @@ export const postsData: Post[] = [
     authorId: 123,
     name: 'mister',
     description: 'Product Designer, slothUI',
-
     title: 'О технологиях',
     avatarImg:
       'https://s3-alpha-sig.figma.com/img/b858/1a3a/8f9a19b6eec05845c18e07081f487330?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q321w6y7NoHbOiCIw2IDkJlJDO~xgpWmPph87uayarE1ji93D0MBUudIPedGlQjNPfVefvmSXbzOhH5m9JGFxsxsV0SyYcgjI5KydN4WrUrNWWp9zdoAk5ZlSZ~1PMZwaEvWmcw945n6RXly5WBT5Lk4RzIkGmPBgdSyxP6aV3zA6BA28mEzID--Y5E203lwXXeTIJmseY~ID9AIPxoXdpwxPptHZWNTVmw00OmyM68ohzV3Lqgv~FDkeGln6FiW0yZEdhHolbTlZR8Rz8e3wRTK5px4M8BoE~YFkt0kbKWsYSH-2f9Xj70wm0jDRb9MD8mORS7MPJjYHAFpmhZ59g__',
-
     content:
       'Современные технологии стремительно меняют нашу жизнь. Искусственный интеллект, виртуальная реальность и интернет вещей уже стали частью повседневности. Однако важно помнить, что технологии должны служить людям, а не заменять человеческое взаимодействие.',
     image:
       'https://plus.unsplash.com/premium_photo-1738604140980-e757acee730c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     likes: 20,
     comments: ['Интересно!', 'Продолжайте в том же духе.'],
-    createdAt: '2025-01-02T14:30:00Z',
+    createdAt: '2024-07-02T14:30:00Z',
     tags: ['пейзажи', 'спорт', 'мир', 'машины'],
   },
   {
@@ -44,11 +40,9 @@ export const postsData: Post[] = [
     authorId: 123,
     name: 'mister',
     description: 'Product Designer, slothUI',
-
     title: 'О книгах',
     avatarImg:
       'https://s3-alpha-sig.figma.com/img/b858/1a3a/8f9a19b6eec05845c18e07081f487330?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q321w6y7NoHbOiCIw2IDkJlJDO~xgpWmPph87uayarE1ji93D0MBUudIPedGlQjNPfVefvmSXbzOhH5m9JGFxsxsV0SyYcgjI5KydN4WrUrNWWp9zdoAk5ZlSZ~1PMZwaEvWmcw945n6RXly5WBT5Lk4RzIkGmPBgdSyxP6aV3zA6BA28mEzID--Y5E203lwXXeTIJmseY~ID9AIPxoXdpwxPptHZWNTVmw00OmyM68ohzV3Lqgv~FDkeGln6FiW0yZEdhHolbTlZR8Rz8e3wRTK5px4M8BoE~YFkt0kbKWsYSH-2f9Xj70wm0jDRb9MD8mORS7MPJjYHAFpmhZ59g__',
-
     content:
       'Книги — это окно в другой мир. Они позволяют нам путешествовать во времени, узнавать новые культуры и погружаться в удивительные истории. Чтение развивает воображение, улучшает память и помогает лучше понимать окружающий мир.',
     image:
@@ -63,11 +57,9 @@ export const postsData: Post[] = [
     authorId: 123,
     name: 'mister',
     description: 'Product Designer, slothUI',
-
     title: 'О путешествиях',
     avatarImg:
       'https://s3-alpha-sig.figma.com/img/b858/1a3a/8f9a19b6eec05845c18e07081f487330?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q321w6y7NoHbOiCIw2IDkJlJDO~xgpWmPph87uayarE1ji93D0MBUudIPedGlQjNPfVefvmSXbzOhH5m9JGFxsxsV0SyYcgjI5KydN4WrUrNWWp9zdoAk5ZlSZ~1PMZwaEvWmcw945n6RXly5WBT5Lk4RzIkGmPBgdSyxP6aV3zA6BA28mEzID--Y5E203lwXXeTIJmseY~ID9AIPxoXdpwxPptHZWNTVmw00OmyM68ohzV3Lqgv~FDkeGln6FiW0yZEdhHolbTlZR8Rz8e3wRTK5px4M8BoE~YFkt0kbKWsYSH-2f9Xj70wm0jDRb9MD8mORS7MPJjYHAFpmhZ59g__',
-
     content:
       'Путешествия — это не только способ отдохнуть, но и возможность узнать что-то новое. Каждая страна, каждый город имеет свою уникальную историю и культуру. Путешествия расширяют кругозор и помогают взглянуть на мир с другой стороны.',
     image:
@@ -82,11 +74,9 @@ export const postsData: Post[] = [
     authorId: 456,
     name: 'mister',
     description: 'Product Designer, slothUI',
-
     title: 'О здоровье',
     avatarImg:
       'https://s3-alpha-sig.figma.com/img/b858/1a3a/8f9a19b6eec05845c18e07081f487330?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q321w6y7NoHbOiCIw2IDkJlJDO~xgpWmPph87uayarE1ji93D0MBUudIPedGlQjNPfVefvmSXbzOhH5m9JGFxsxsV0SyYcgjI5KydN4WrUrNWWp9zdoAk5ZlSZ~1PMZwaEvWmcw945n6RXly5WBT5Lk4RzIkGmPBgdSyxP6aV3zA6BA28mEzID--Y5E203lwXXeTIJmseY~ID9AIPxoXdpwxPptHZWNTVmw00OmyM68ohzV3Lqgv~FDkeGln6FiW0yZEdhHolbTlZR8Rz8e3wRTK5px4M8BoE~YFkt0kbKWsYSH-2f9Xj70wm0jDRb9MD8mORS7MPJjYHAFpmhZ59g__',
-
     content:
       'Здоровье — это самое ценное, что у нас есть. Правильное питание, регулярные физические нагрузки и достаточный сон — вот основные составляющие здорового образа жизни. Не забывайте заботиться о себе, ведь здоровье невозможно купить.',
     image:
@@ -101,11 +91,9 @@ export const postsData: Post[] = [
     authorId: 456,
     name: 'mister',
     description: 'Product Designer, slothUI',
-
     title: 'О музыке',
     avatarImg:
       'https://s3-alpha-sig.figma.com/img/b858/1a3a/8f9a19b6eec05845c18e07081f487330?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q321w6y7NoHbOiCIw2IDkJlJDO~xgpWmPph87uayarE1ji93D0MBUudIPedGlQjNPfVefvmSXbzOhH5m9JGFxsxsV0SyYcgjI5KydN4WrUrNWWp9zdoAk5ZlSZ~1PMZwaEvWmcw945n6RXly5WBT5Lk4RzIkGmPBgdSyxP6aV3zA6BA28mEzID--Y5E203lwXXeTIJmseY~ID9AIPxoXdpwxPptHZWNTVmw00OmyM68ohzV3Lqgv~FDkeGln6FiW0yZEdhHolbTlZR8Rz8e3wRTK5px4M8BoE~YFkt0kbKWsYSH-2f9Xj70wm0jDRb9MD8mORS7MPJjYHAFpmhZ59g__',
-
     content:
       'Музыка — это универсальный язык, который понятен каждому. Она может вдохновлять, успокаивать или заряжать энергией. Независимо от жанра, музыка имеет огромное влияние на наше настроение и эмоциональное состояние.',
     image:
@@ -120,11 +108,9 @@ export const postsData: Post[] = [
     authorId: 456,
     name: 'mister',
     description: 'Product Designer, slothUI',
-
     title: 'О дружбе',
     avatarImg:
       'https://s3-alpha-sig.figma.com/img/b858/1a3a/8f9a19b6eec05845c18e07081f487330?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q321w6y7NoHbOiCIw2IDkJlJDO~xgpWmPph87uayarE1ji93D0MBUudIPedGlQjNPfVefvmSXbzOhH5m9JGFxsxsV0SyYcgjI5KydN4WrUrNWWp9zdoAk5ZlSZ~1PMZwaEvWmcw945n6RXly5WBT5Lk4RzIkGmPBgdSyxP6aV3zA6BA28mEzID--Y5E203lwXXeTIJmseY~ID9AIPxoXdpwxPptHZWNTVmw00OmyM68ohzV3Lqgv~FDkeGln6FiW0yZEdhHolbTlZR8Rz8e3wRTK5px4M8BoE~YFkt0kbKWsYSH-2f9Xj70wm0jDRb9MD8mORS7MPJjYHAFpmhZ59g__',
-
     content:
       'Дружба — это одно из самых важных чувств в жизни человека. Настоящие друзья всегда поддержат в трудную минуту и разделят радость. Дружба строится на доверии, взаимопонимании и искренности.',
     image:
@@ -139,11 +125,9 @@ export const postsData: Post[] = [
     authorId: 456,
     name: 'mister',
     description: 'Product Designer, slothUI',
-
     title: 'О науке',
     avatarImg:
       'https://s3-alpha-sig.figma.com/img/b858/1a3a/8f9a19b6eec05845c18e07081f487330?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q321w6y7NoHbOiCIw2IDkJlJDO~xgpWmPph87uayarE1ji93D0MBUudIPedGlQjNPfVefvmSXbzOhH5m9JGFxsxsV0SyYcgjI5KydN4WrUrNWWp9zdoAk5ZlSZ~1PMZwaEvWmcw945n6RXly5WBT5Lk4RzIkGmPBgdSyxP6aV3zA6BA28mEzID--Y5E203lwXXeTIJmseY~ID9AIPxoXdpwxPptHZWNTVmw00OmyM68ohzV3Lqgv~FDkeGln6FiW0yZEdhHolbTlZR8Rz8e3wRTK5px4M8BoE~YFkt0kbKWsYSH-2f9Xj70wm0jDRb9MD8mORS7MPJjYHAFpmhZ59g__',
-
     content:
       'Наука — это двигатель прогресса. Благодаря научным открытиям человечество смогло достичь невероятных высот. Однако наука — это не только технологии, но и стремление к познанию мира, в котором мы живем.',
     image:
@@ -158,11 +142,9 @@ export const postsData: Post[] = [
     authorId: 456,
     name: 'mister',
     description: 'Product Designer, slothUI',
-
     title: 'О искусстве',
     avatarImg:
       'https://s3-alpha-sig.figma.com/img/b858/1a3a/8f9a19b6eec05845c18e07081f487330?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q321w6y7NoHbOiCIw2IDkJlJDO~xgpWmPph87uayarE1ji93D0MBUudIPedGlQjNPfVefvmSXbzOhH5m9JGFxsxsV0SyYcgjI5KydN4WrUrNWWp9zdoAk5ZlSZ~1PMZwaEvWmcw945n6RXly5WBT5Lk4RzIkGmPBgdSyxP6aV3zA6BA28mEzID--Y5E203lwXXeTIJmseY~ID9AIPxoXdpwxPptHZWNTVmw00OmyM68ohzV3Lqgv~FDkeGln6FiW0yZEdhHolbTlZR8Rz8e3wRTK5px4M8BoE~YFkt0kbKWsYSH-2f9Xj70wm0jDRb9MD8mORS7MPJjYHAFpmhZ59g__',
-
     content:
       'Искусство — это способ выразить свои чувства и мысли. Оно может быть красивым, грустным, вдохновляющим или провокационным. Искусство помогает нам лучше понимать себя и окружающий мир.',
     image:
@@ -177,11 +159,9 @@ export const postsData: Post[] = [
     authorId: 789,
     name: 'mister',
     description: 'Product Designer, slothUI',
-
     title: 'О мечтах',
     avatarImg:
       'https://s3-alpha-sig.figma.com/img/b858/1a3a/8f9a19b6eec05845c18e07081f487330?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Q321w6y7NoHbOiCIw2IDkJlJDO~xgpWmPph87uayarE1ji93D0MBUudIPedGlQjNPfVefvmSXbzOhH5m9JGFxsxsV0SyYcgjI5KydN4WrUrNWWp9zdoAk5ZlSZ~1PMZwaEvWmcw945n6RXly5WBT5Lk4RzIkGmPBgdSyxP6aV3zA6BA28mEzID--Y5E203lwXXeTIJmseY~ID9AIPxoXdpwxPptHZWNTVmw00OmyM68ohzV3Lqgv~FDkeGln6FiW0yZEdhHolbTlZR8Rz8e3wRTK5px4M8BoE~YFkt0kbKWsYSH-2f9Xj70wm0jDRb9MD8mORS7MPJjYHAFpmhZ59g__',
-
     content:
       'Мечты — это то, что движет нами вперед. Они дают нам цель и мотивацию для достижения новых высот. Не бойтесь мечтать, ведь именно мечты делают нашу жизнь яркой и насыщенной.',
     image:

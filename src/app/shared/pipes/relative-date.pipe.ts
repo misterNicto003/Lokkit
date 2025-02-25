@@ -14,7 +14,9 @@ export class RelativeDatePipe implements PipeTransform {
     if (rezult < 86400000) return `${Math.floor(rezult / 3600000)} часа назад`;
     if (rezult < 604800000)
       return `${Math.floor(rezult / 86400000)} дней назад`;
+    if (rezult < 2628002880)
+      return `${Math.floor(rezult / 604800000)} недель назад`;
 
-    return `${Math.floor(rezult / 604800000)} недель назад`;
+    return `${Math.floor(rezult / 2628002880)} месяц назад`;
   }
 }

@@ -11,7 +11,7 @@
       </div>
       <div class="post__info">
         <h3 class="post__name">{{ post.name | userNamePipe }}</h3>
-        <p class="post__role">{{ post.description }}</p>
+        <p class="post__role">{{ post.description | userNamePipe }}</p>
       </div>
     </div>
     <h2>{{ post.createdAt | relativeDate }}</h2>
@@ -58,9 +58,11 @@
     </div>
 
     <div *ngIf="showComment">
-      <h1>12321</h1>
-      <h1>12321</h1>
-      <h1>12321</h1>
+      @for(comment of post.comments; track comment) {
+      <div>
+        {{ comment }}
+      </div>
+      }
     </div>
   </div>
 

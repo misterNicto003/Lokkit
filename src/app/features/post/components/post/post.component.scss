@@ -4,6 +4,11 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--gray-color);
 
+  max-width: 760px;
+  margin: 0 auto;
+
+  margin-top: 20px;
+
   &__header {
     display: flex;
     align-items: flex-start;
