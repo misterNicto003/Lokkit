@@ -12,8 +12,8 @@ import { UsersComponent } from './features/users/pages/users.component';
   imports: [
     RouterOutlet,
     HeaderComponent,
-    // FeedComponent,
-    UsersComponent,
+    FeedComponent,
+    // UsersComponent,
     CommonModule,
     // ProfileComponent,
   ],
