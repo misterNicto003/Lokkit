@@ -7,3 +7,4 @@ export { ButtonComponent as ButtonComponent } from './components/button/button.c
 export { HeaderComponent as HeaderComponent } from './components/header/header.component';
 export { IconComponent as IconComponent } from './components/icons/icon.component';
 export { InputComponent as InputComponent } from './components/input/input.component';
+export { SidebarComponent as SidebarComponent } from './components/sidebar/sidebar.component';

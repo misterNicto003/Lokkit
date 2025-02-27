@@ -1,0 +1,80 @@
+<aside class="aside">
+  <div class="aside-top">
+    <app-icon [icon]="'LokkitLogo'" />
+
+    <form class="aside-form">
+      <app-icon [icon]="'Search'" />
+      <input class="aside-form__input" type="text" placeholder="Search..." />
+    </form>
+    <nav class="aside-nav">
+      <li class="aside-nav__list des">
+        <app-icon [icon]="'HouseSimple'" />
+        <p>Home</p>
+        <span>10</span>
+      </li>
+      <li class="aside-nav__list">
+        <app-icon [icon]="'ListBullets'" />
+        <p>Tasks</p>
+      </li>
+      <li class="aside-nav__list des">
+        <app-icon [icon]="'Users'" />
+        <p>Users</p>
+        <span>2</span>
+      </li>
+      <li class="aside-nav__list">
+        <app-icon [icon]="'Cube'" />
+        <p>APIs</p>
+      </li>
+      <li class="aside-nav__list">
+        <app-icon [icon]="'CreditCard'" />
+        <p>Subscription</p>
+      </li>
+      <li class="aside-nav__list">
+        <app-icon [icon]="'GearSix'" />
+        <p>Settings</p>
+      </li>
+      <li class="aside-nav__list">
+        <app-icon [icon]="'ChatTeardropDots'" />
+        <p>Help & Support</p>
+      </li>
+    </nav>
+  </div>
+  <div class="aside-bottom">
+    <div class="aside-banner">
+      <div class="aside-banner__icon">
+        <app-icon class="aside-banner__icon--warning" [icon]="'Warning'" />
+        <app-icon [icon]="'X'" />
+      </div>
+      <p class="aside-banner__text">
+        Enjoy unlimited access to our app with only a small price monthly.
+      </p>
+      <div class="aside-banner__actions">
+        <a class="aside-banner__dismiss">Dismiss</a>
+        <a class="aside-banner__button--primary">Go Pro</a>
+      </div>
+    </div>
+
+    <div class="aside-user">
+      <div class="aside-user__info">
+        <app-icon [icon]="'AvatarPost'" />
+        <div class="aside-user__info--name">
+          <p>Azunyan U. Wu</p>
+          <span>Basic Member</span>
+        </div>
+      </div>
+      <app-icon [icon]="'Exit'" />
+    </div>
+    <!-- <div class="aside-user">
+      <div class="aside-user__info">
+        <app-icon [icon]="'AvatarPost'" />
+        <div>
+          <p class="aside-user__name">Azunyan U. Wu</p>
+          <span class="aside-user__status">Basic Member</span>
+        </div>
+      </div>
+      <div class="aside-user__logout">
+        <app-icon [icon]="'Exit'" />
+      </div>
+    </div> -->
+  </div>
+</aside>

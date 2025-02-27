@@ -12,3 +12,10 @@
 body {
   background-color: var(--background);
 }
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
