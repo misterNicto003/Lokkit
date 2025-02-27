@@ -1,12 +1,16 @@
 <div class="container">
-  <app-header></app-header>
-  <app-sidebar></app-sidebar>
+  <div class="app">
+    <app-sidebar class="app__sidebar"></app-sidebar>
+    <app-header class="app__header"></app-header>
 
-  <ng-container>
-    <app-feed></app-feed>
-    <!-- <app-users></app-users> -->
-    <!-- <app-profile></app-profile> -->
-  </ng-container>
+    <div class="app__content">
+      <div class="app__main">
+        <app-feed></app-feed>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
 </div>
 
-<router-outlet />
+<!-- <app-users></app-users> -->
+<!-- <app-profile></app-profile> -->

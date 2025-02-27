@@ -26,4 +26,7 @@ export type iconTypes =
   | 'LokkitLogo'
   | 'Warning'
   | 'X'
+  | 'Message'
+  | 'Reminder'
+  | 'Setting'
   | 'Exit';
