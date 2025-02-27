@@ -11,4 +11,12 @@
 
 body {
   background-color: var(--background);
+  max-width: 1440px;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
 }
