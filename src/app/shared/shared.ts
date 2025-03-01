@@ -8,3 +8,4 @@ export { HeaderComponent as HeaderComponent } from './components/header/header.c
 export { IconComponent as IconComponent } from './components/icons/icon.component';
 export { InputComponent as InputComponent } from './components/input/input.component';
 export { SidebarComponent as SidebarComponent } from './components/sidebar/sidebar.component';
+export { FrameComponent as FrameComponent } from './components/frame/frame.component';

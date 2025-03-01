@@ -1,9 +1,9 @@
-<ng-container *ngIf="postService.posts.length > 0; else noPosts">
-  @for (post of postService.posts; track post._id) {
-  <app-post [post]="post"></app-post>
-  }
-</ng-container>
+<div class="feed_container">
+  <div class="feed_posts">
+    @for (post of postService.posts; track post._id) {
+    <app-post [post]="post" />
+    }
+  </div>
 
-<ng-template #noPosts>
-  <p>Постов пока нет</p>
-</ng-template>
+  <app-frame />
+</div>

@@ -12,9 +12,9 @@ import { HeaderComponent, SidebarComponent } from './shared/shared';
   imports: [
     RouterOutlet,
     HeaderComponent,
-    FeedComponent,
-    SidebarComponent,
     CommonModule,
+    SidebarComponent,
+    // FeedComponent,
     // UsersComponent,
     // ProfileComponent,
   ],
