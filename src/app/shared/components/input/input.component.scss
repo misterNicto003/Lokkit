@@ -1,5 +1,14 @@
-input {
-  border: none;
-  outline: none;
-  padding: 5px;
+.form {
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 13px 12px;
+
+  background-color: white;
+  &-input {
+    width: 100%;
+  }
 }

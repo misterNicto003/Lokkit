@@ -1,19 +1,22 @@
 <div class="navbar">
-  <div class="search-box">
-    <header-input />
-  </div>
-  <div>
-    <div class="buttons">
-      <add-button></add-button>
+  <header-input />
+  <div class="navbar-profile">
+    <div class="navbar-profile__btn">
+      <add-button />
     </div>
-    <div class="icons">
-      <i class="fas fa-envelope"></i>
-      <i class="fas fa-bell"></i>
-      <i class="fas fa-cog"></i>
+    <nav class="navbar-profile__nav">
+      <a href="#" class="navbar-profile__nav-link">
+        <app-icon [icon]="'Message'" />
+      </a>
+      <a href="#" class="navbar-profile__nav-link">
+        <app-icon [icon]="'Reminder'" />
+      </a>
+      <a href="#" class="navbar-profile__nav-link">
+        <app-icon [icon]="'Setting'" />
+      </a>
+    </nav>
+    <div class="navbar-profile-user">
+      <app-icon class="navbar-profile-user--img" [icon]="'AvatarPost'" />
     </div>
-    <!-- <img src="../../../../assets/images/Frame 3.png" alt="" />
-    <div class="profile">
-      <img src="profile.jpg" alt="Profile Picture" />
-    </div> -->
   </div>
 </div>

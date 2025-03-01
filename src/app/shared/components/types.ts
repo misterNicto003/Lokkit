@@ -4,7 +4,7 @@ export type iconTypes =
   | 'Cube'
   | 'GearSix'
   | 'HouseSimple'
-  | 'Icon'
+  | 'Search'
   | 'ListBullets'
   | 'Users'
   | 'Vector (1)'
@@ -22,4 +22,11 @@ export type iconTypes =
   | 'DotsVertical'
   | 'AvataUser'
   | 'Plus'
-  | 'AvatarPost';
+  | 'AvatarPost'
+  | 'LokkitLogo'
+  | 'Warning'
+  | 'X'
+  | 'Message'
+  | 'Reminder'
+  | 'Setting'
+  | 'Exit';

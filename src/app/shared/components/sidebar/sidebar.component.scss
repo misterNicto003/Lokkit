@@ -1,0 +1,140 @@
+.aside {
+  max-width: 312px;
+  width: 100%;
+  padding: 32px 16px;
+  background: var(--white-color);
+  border: 1px solid var(--gray-color);
+  position: sticky;
+  top: 0;
+  left: 0;
+  &-form {
+    border: 1px solid var(--border-color);
+    border-radius: 123px;
+    padding: 9px 12px;
+    margin: 32px 0;
+
+    &__input {
+      padding-left: 8px;
+      color: var(--475569-color);
+    }
+  }
+
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px;
+
+      & span {
+        border: 1px solid var(--icyBlue-color);
+        background: var(--iceLilac-color);
+        color: var(--electricViolet-color);
+        padding: 4px 10px;
+        border-radius: 1234px;
+
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.6%;
+        text-align: center;
+      }
+
+      & p {
+        flex: 1;
+        width: 100%;
+      }
+    }
+  }
+
+  &-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    border-bottom: 1px s;
+    padding: 16px;
+    margin-top: 116px;
+    margin-bottom: 24px;
+    border-radius: 24px;
+
+    background: var(--background);
+
+    &__icon {
+      display: flex;
+      justify-content: space-between;
+      &--warning {
+        padding: 11px 12px;
+        border-radius: 123px;
+        background: var(--gray-color);
+      }
+    }
+
+    &__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &__actions {
+      display: flex;
+      gap: 16px;
+
+      & a {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.6%;
+      }
+    }
+    &__button {
+      &--primary {
+        color: var(--electricViolet-color);
+      }
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22.4px;
+      letter-spacing: 0%;
+      color: var(--475569-color);
+    }
+  }
+
+  &-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    border-top: 1px solid var(--gray-color);
+
+    &__info {
+      display: flex;
+      gap: 12px;
+      padding-top: 24px;
+
+      &--name {
+        & p {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: -0.7%;
+          color: var(--dark-color);
+        }
+
+        & span {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: -0.6%;
+          color: var(--475569-color);
+        }
+      }
+    }
+  }
+}

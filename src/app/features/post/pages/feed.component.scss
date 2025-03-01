@@ -1,0 +1,18 @@
+.feed_container {
+  display: flex;
+
+  justify-content: space-between;
+  gap: 44px;
+}
+
+.feed_posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+app-frame {
+  max-width: 368px;
+  width: 100%;
+}

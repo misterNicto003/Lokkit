@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { IconComponent } from '../icons/icon.component';
 
 @Component({
-  selector: 'header-input',
+  selector: 'app-sidebar',
   imports: [IconComponent],
-  templateUrl: './input.component.html',
-  styleUrl: './input.component.scss',
+  templateUrl: './sidebar.component.html',
+  styleUrl: './sidebar.component.scss',
 })
-export class InputComponent {}
+export class SidebarComponent {}
