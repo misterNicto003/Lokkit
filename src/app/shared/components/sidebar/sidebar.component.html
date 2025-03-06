@@ -7,33 +7,33 @@
       <input class="aside-form__input" type="text" placeholder="Search..." />
     </form>
     <nav class="aside-nav">
-      <li class="aside-nav__list des">
+      <li routerLink="" routerLink="" class="aside-nav__list des">
         <app-icon [icon]="'HouseSimple'" />
         <p>Home</p>
         <span>10</span>
       </li>
-      <li class="aside-nav__list">
+      <li routerLink="Tasks" class="aside-nav__list">
         <app-icon [icon]="'ListBullets'" />
         <p>Tasks</p>
       </li>
-      <li class="aside-nav__list des">
+      <li routerLink="users" class="aside-nav__list des">
         <app-icon [icon]="'Users'" />
         <p>Users</p>
         <span>2</span>
       </li>
-      <li class="aside-nav__list">
+      <li routerLink="APIs" class="aside-nav__list">
         <app-icon [icon]="'Cube'" />
         <p>APIs</p>
       </li>
-      <li class="aside-nav__list">
+      <li routerLink="Subscription" class="aside-nav__list">
         <app-icon [icon]="'CreditCard'" />
         <p>Subscription</p>
       </li>
-      <li class="aside-nav__list">
+      <li routerLink="Settings" class="aside-nav__list">
         <app-icon [icon]="'GearSix'" />
         <p>Settings</p>
       </li>
-      <li class="aside-nav__list">
+      <li routerLink="Help & Support" class="aside-nav__list">
         <app-icon [icon]="'ChatTeardropDots'" />
         <p>Help & Support</p>
       </li>
@@ -64,17 +64,5 @@
       </div>
       <app-icon [icon]="'Exit'" />
     </div>
-    <!-- <div class="aside-user">
-      <div class="aside-user__info">
-        <app-icon [icon]="'AvatarPost'" />
-        <div>
-          <p class="aside-user__name">Azunyan U. Wu</p>
-          <span class="aside-user__status">Basic Member</span>
-        </div>
-      </div>
-      <div class="aside-user__logout">
-        <app-icon [icon]="'Exit'" />
-      </div>
-    </div> -->
   </div>
 </aside>

@@ -7,6 +7,7 @@ import { usersData } from '../userData';
 })
 export class UserService {
   public users: User[] = usersData;
+  public activeUser: User = this.users[0];
   user: User | null = null;
 
   getAllUsers() {

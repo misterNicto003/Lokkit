@@ -1,10 +1,18 @@
-import { Component, Input } from '@angular/core';
-import { IconComponent } from '../../shared/components/icons/icon.component';
+import { Component, inject, Input, OnInit } from '@angular/core';
+
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
-  imports: [IconComponent],
+  imports: [RouterOutlet, RouterLink],
 })
-export class ProfileComponent {}
+export class ProfileComponent implements OnInit {
+  public profileId: string | null = null;
+  private route = inject(ActivatedRoute);
+  ngOnInit() {
+    this.profileId = this.route.snapshot.paramMap.get('id');
+    console.log('User ID:', this.profileId);
+  }
+}
