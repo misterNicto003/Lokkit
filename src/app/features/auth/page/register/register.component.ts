@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { IconComponent } from '../../../../shared/shared';
 
 @Component({
   selector: 'app-register',
-  imports: [],
+  imports: [IconComponent],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.scss'
+  styleUrl: './register.component.scss',
 })
-export class RegisterComponent {
-
-}
+export class RegisterComponent {}

@@ -1,1 +1,39 @@
-<p>login works!</p>
+<div class="container">
+  <div class="login">
+    <div class="login__logo">
+      <img class="login__logo-avatar" src="assets/icons/Avatar.png" alt="" />
+      <span class="login__logo-title">Login</span>
+    </div>
+    <form class="login__form" action="">
+      <div class="login__fields">
+        <label class="login__field">
+          <app-icon [icon]="'Email'"></app-icon>
+          <input class="login__input" type="email" placeholder="Email" />
+        </label>
+        <label class="login__field">
+          <app-icon [icon]="'Unlock'"></app-icon>
+          <input class="login__input" type="password" placeholder="Password" />
+        </label>
+      </div>
+      <div class="login__checkbox">
+        <div>
+          <input class="login__checkbox-input" type="checkbox" id="checkbox" />
+          <span class="login__checkbox-text">Remember me</span>
+        </div>
+        <a class="login__forgot" href="">Забыли пароль?</a>
+      </div>
+      <button class="login__button">Login</button>
+      <div class="login__register">
+        <p class="login__register-text">Don't have an account?</p>
+        <a routerLink="/register" class="login__register-link" href=""
+          >Register</a
+        >
+      </div>
+      <div class="login__social">
+        <app-icon class="login__social-icon" [icon]="'Google'"></app-icon>
+        <app-icon class="login__social-icon" [icon]="'Vkn'"></app-icon>
+        <app-icon class="login__social-icon" [icon]="'Youtube'"></app-icon>
+      </div>
+    </form>
+  </div>
+</div>

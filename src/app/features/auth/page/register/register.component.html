@@ -1,1 +1,49 @@
-<p>register works!</p>
+<div class="container">
+  <div class="register">
+    <div class="register__logo">
+      <img class="register__logo-avatar" src="assets/icons/Avatar.png" alt="" />
+      <span class="register__logo-title">Register</span>
+    </div>
+    <form class="register__form" action="">
+      <div class="register__fields">
+        <label class="register__field">
+          <app-icon [icon]="'Email'"></app-icon>
+          <input class="register__input" type="email" placeholder="Email" />
+        </label>
+        <label class="register__field">
+          <app-icon [icon]="'UserCircle'"></app-icon>
+          <input class="register__input" type="text" placeholder="Username" />
+        </label>
+        <label class="register__field">
+          <app-icon [icon]="'Unlock'"></app-icon>
+          <input
+            class="register__input"
+            type="password"
+            placeholder="Password"
+          />
+        </label>
+        <label class="register__field">
+          <app-icon [icon]="'Unlock'"></app-icon>
+          <input
+            class="register__input"
+            type="password"
+            placeholder="Confirm Password"
+          />
+        </label>
+      </div>
+
+      <button class="register__button">Register</button>
+      <div class="register__register">
+        <p class="register__register-text">Don't have an account?</p>
+        <a routerLink="/register" class="register__register-link" href=""
+          >Log In</a
+        >
+      </div>
+      <div class="register__social">
+        <app-icon class="register__social-icon" [icon]="'Google'"></app-icon>
+        <app-icon class="register__social-icon" [icon]="'Vkn'"></app-icon>
+        <app-icon class="register__social-icon" [icon]="'Youtube'"></app-icon>
+      </div>
+    </form>
+  </div>
+</div>

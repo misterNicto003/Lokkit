@@ -29,4 +29,10 @@ export type iconTypes =
   | 'Message'
   | 'Reminder'
   | 'Setting'
+  | 'Youtube'
+  | 'Vkn'
+  | 'Google'
+  | 'Email'
+  | 'Unlock'
+  | 'UserCircle'
   | 'Exit';
