@@ -5,18 +5,21 @@
       <add-button />
     </div>
     <nav class="navbar-profile__nav">
-      <a href="#" class="navbar-profile__nav-link">
+      <a class="navbar-profile__nav-link">
         <app-icon [icon]="'Message'" />
       </a>
-      <a href="#" class="navbar-profile__nav-link">
+      <a class="navbar-profile__nav-link">
         <app-icon [icon]="'Reminder'" />
       </a>
-      <a href="#" class="navbar-profile__nav-link">
+      <a class="navbar-profile__nav-link">
         <app-icon [icon]="'Setting'" />
       </a>
     </nav>
-    <div class="navbar-profile-user">
-      <app-icon class="navbar-profile-user--img" [icon]="'AvatarPost'" />
+    <div
+      [routerLink]="['/profile', userService.activeUser._id]"
+      class="navbar-profile-user"
+    >
+      <img [src]="userService.activeUser.avatar" alt="" />
     </div>
   </div>
 </div>

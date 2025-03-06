@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { InputComponent } from '../input/input.component';
 import { IconComponent } from '../icons/icon.component';
+import { RouterLink } from '@angular/router';
+import { UserService } from '../../../core/services/user.service';
 
 @Component({
   selector: 'app-header',
-  imports: [ButtonComponent, InputComponent, IconComponent],
+  imports: [ButtonComponent, InputComponent, IconComponent, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  public userService = inject(UserService);
+}

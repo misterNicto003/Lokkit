@@ -1,6 +1,10 @@
-<div>
-  <app-icon [icon]="'AvatarPost'" />
-  <!-- <img src="{{ post.avatarImg }}" alt="" />
-  <div>{{ post.UserNAme }}</div>
-  <div>{{ post.avatarImg }}</div> -->
+<div class="profile">
+  <h2>Profiles</h2>
+  <div class="profile_links">
+    <a [routerLink]="['/profile', profileId, 'info']">info</a>
+    <a [routerLink]="['/profile', profileId, 'setting']">setting</a>
+    <a [routerLink]="['/profile', profileId, 'devices']">devices</a>
+  </div>
 </div>
+
+<router-outlet />
