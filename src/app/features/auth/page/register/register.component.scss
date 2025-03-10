@@ -51,6 +51,14 @@
     padding: 13px 12px;
     border-radius: 123px;
     border: 1px solid var(--border-color);
+
+    input.ng-valid.ng-touched {
+      border-bottom: 1px solid green;
+    }
+
+    input.ng-invalid.ng-touched {
+      border-bottom: 1px solid red;
+    }
   }
 
   &__checkbox {
