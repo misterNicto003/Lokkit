@@ -18,8 +18,8 @@
           />
         </label>
 
-        <div *ngIf="getErrorMessage('email')">
-          <span>Invalid email address</span>
+        <div class="form" *ngIf="getErrorMessage('email')">
+          <span class="form-error">{{ getErrorMessage("email") }}</span>
         </div>
         <label class="register__field">
           <app-icon [icon]="'UserCircle'"></app-icon>
@@ -31,8 +31,8 @@
             formControlName="username"
           />
         </label>
-        <div *ngIf="getErrorMessage('username')">
-          <span>Minimum 6 characters required</span>
+        <div class="form" *ngIf="getErrorMessage('username')">
+          <span class="form-error">{{ getErrorMessage("username") }}</span>
         </div>
         <label class="register__field">
           <app-icon [icon]="'Unlock'"></app-icon>
@@ -43,8 +43,8 @@
             formControlName="password"
           />
         </label>
-        <div *ngIf="getErrorMessage('password')">
-          <span>Minimum 6 characters required</span>
+        <div class="form" *ngIf="getErrorMessage('password')">
+          <span class="form-error">{{ getErrorMessage("password") }}</span>
         </div>
         <label class="register__field">
           <app-icon [icon]="'Unlock'"></app-icon>
@@ -56,12 +56,14 @@
             placeholder="Confirm Password"
           />
         </label>
-        <div *ngIf="getErrorMessage('confirmPassword')">
-          <span>The passwords do not match</span>
+        <div class="form" *ngIf="getErrorMessage('confirmPassword')">
+          <span class="form-error">{{
+            getErrorMessage("confirmPassword")
+          }}</span>
         </div>
       </div>
 
-      <button class="register__button">Register</button>
+      <button class="register__button" type="submit">Register</button>
       <div class="register__register">
         <p class="register__register-text">Don't have an account?</p>
         <a routerLink="/register" class="register__register-link" href=""
@@ -76,121 +78,3 @@
     </form>
   </div>
 </div>
-
-<!-- <div class="container">
-  <div class="register">
-    <div class="register__logo">
-      <img class="register__logo-avatar" src="assets/icons/Avatar.png" alt="" />
-      <span class="register__logo-title">Register</span>
-    </div>
-    <form
-      class="register__form"
-      #regForm="ngForm"
-      (ngSubmit)="onSubmit(regForm)"
-    >
-      <div class="register__fields">
-        <label class="register__field">
-          <app-icon [icon]="'Email'"></app-icon>
-          <input
-            class="register__input"
-            id="email"
-            type="email"
-            placeholder="Email"
-            name="email"
-            required
-            minlength="3"
-            [(ngModel)]="user.email"
-            #email="ngModel"
-          />
-        </label>
-        <div *ngIf="email.invalid && email.touched">
-          <small *ngIf="email.errors?.['required']"
-            >Email обязательное поле</small
-          >
-          <small *ngIf="email.errors?.['minlength']">Минимум 3 символа</small>
-        </div>
-
-        <label class="register__field">
-          <app-icon [icon]="'UserCircle'"></app-icon>
-          <input
-            class="register__input"
-            type="text"
-            placeholder="Username"
-            required
-            name="username"
-            minlength="3"
-            [(ngModel)]="user.username"
-            #username="ngModel"
-          />
-        </label>
-        <div *ngIf="username.invalid && username.touched">
-          <small *ngIf="username.errors?.['required']">Имя обязательно</small>
-          <small *ngIf="username.errors?.['minlength']"
-            >Минимум 3 символа</small
-          >
-        </div>
-
-        <label class="register__field">
-          <app-icon [icon]="'Unlock'"></app-icon>
-          <input
-            class="register__input"
-            type="password"
-            placeholder="Password"
-            name="password"
-            required
-            minlength="6"
-            [(ngModel)]="user.password"
-            #password="ngModel"
-          />
-        </label>
-        <div *ngIf="password.invalid && password.touched">
-          <small *ngIf="password.errors?.['required']">Пароль обязателен</small>
-          <small *ngIf="password.errors?.['minlength']"
-            >Минимум 6 символов</small
-          >
-        </div>
-
-        <label class="register__field">
-          <app-icon [icon]="'Unlock'"></app-icon>
-          <input
-            class="register__input"
-            type="password"
-            placeholder="Confirm Password"
-            name="confirmPassword"
-            required
-            minlength="6"
-            [(ngModel)]="user.confirmPassword"
-            #confirmPassword="ngModel"
-          />
-        </label>
-        <div *ngIf="confirmPassword.invalid && confirmPassword.touched">
-          <small *ngIf="confirmPassword.errors?.['required']"
-            >Подтверждение пароля обязательно</small
-          >
-          <small *ngIf="confirmPassword.errors?.['passwordMismatch']"
-            >Пароли не совпадают</small
-          >
-        </div>
-      </div>
-
-      <button
-        class="register__button"
-        type="submit"
-        [disabled]="regForm.invalid"
-      >
-        Register
-      </button>
-
-      <div class="register__register">
-        <p class="register__register-text">Don't have an account?</p>
-        <a routerLink="/login" class="register__register-link">Log In</a>
-      </div>
-
-      <div class="register__social">
-        <app-icon class="register__social-icon" [icon]="'Google'"></app-icon>
-        <app-icon class="register__social-icon" [icon]="'Vkn'"></app-icon>
-        <app-icon class="register__social-icon" [icon]="'Youtube'"></app-icon>
-      </div>
-    </form>
-  </div>
-</div> -->

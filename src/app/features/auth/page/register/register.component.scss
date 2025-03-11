@@ -41,24 +41,25 @@
   &__fields {
     display: flex;
     flex-direction: column;
-    gap: 20px;
   }
 
   &__field {
     display: flex;
     align-items: center;
     gap: 14px;
+    margin-top: 20px;
+
     padding: 13px 12px;
     border-radius: 123px;
     border: 1px solid var(--border-color);
 
-    input.ng-valid.ng-touched {
-      border-bottom: 1px solid green;
-    }
+    // input.ng-valid.ng-touched {
+    //   border-bottom: 1px solid green;
+    // }
 
-    input.ng-invalid.ng-touched {
-      border-bottom: 1px solid red;
-    }
+    // input.ng-invalid.ng-touched {
+    //   border-bottom: 1px solid red;
+    // }
   }
 
   &__checkbox {
@@ -134,5 +135,14 @@
         border: 1px solid #000;
       }
     }
+  }
+}
+
+.form {
+  transform: translate(10px, 0px);
+  &-error {
+    position: absolute;
+    font-size: 10px;
+    color: var(--red-color);
   }
 }

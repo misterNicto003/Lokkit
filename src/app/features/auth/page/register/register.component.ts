@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, inject, Inject } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -12,6 +12,8 @@ import { IconComponent } from '../../../../shared/shared';
 import { CommonModule } from '@angular/common';
 import { passwordWatchValidator } from '../../password-watch.validator';
 import { retry } from 'rxjs';
+import { Router } from '@angular/router';
+import { AuthService } from '../../../../core/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -21,13 +23,17 @@ import { retry } from 'rxjs';
   styleUrl: './register.component.scss',
 })
 export class RegisterComponent {
-  title = '';
+  private authService = inject(AuthService);
+
   form: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group(
       {
-        email: ['', [Validators.required, Validators.email]],
+        email: [
+          '',
+          [Validators.required, Validators.email, Validators.minLength(6)],
+        ],
         username: ['', [Validators.required, Validators.minLength(6)]],
         password: ['', [Validators.required, Validators.minLength(6)]],
         confirmPassword: ['', [Validators.required]],
@@ -45,13 +51,17 @@ export class RegisterComponent {
     if (controle.touched && controle.hasError('required')) {
       return 'This field is required';
     }
-    if (
-      controle.touched &&
-      controlName === 'email' &&
-      controle.hasError('email')
-    )
-      return '';
 
+    if (controle.touched && controlName === 'email') {
+      if (controle.hasError('required')) {
+        return 'Invalid email address';
+      } else if (controle.hasError('email')) {
+        return 'Please enter a valid email address';
+      } else if (controle.hasError('minlength')) {
+        return 'Email must be at least 6 characters long';
+      }
+      return '';
+    }
     if (
       controle.touched &&
       controlName === 'username' &&
@@ -69,8 +79,8 @@ export class RegisterComponent {
 
     if (
       controle.touched &&
-      controlName === ' confirmPassword' &&
-      this.form.hasError('passwordMismatch')
+      controlName === 'confirmPassword' &&
+      this.form.hasError('pass')
     ) {
       return 'The passwords do not match';
     }
@@ -80,9 +90,10 @@ export class RegisterComponent {
 
   onSubmit() {
     if (this.form.valid) {
+      this.authService.register();
+
       console.log('Form submitted:', this.form.value);
     } else {
-      this.form.markAllAsTouched(); // Помечаем все поля как "затронутые"
       console.log('Form is invalid');
     }
   }
