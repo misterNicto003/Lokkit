@@ -25,16 +25,6 @@ import { AuthService } from '../../../../core/services/auth.service';
 export class RegisterComponent {
   private authService = inject(AuthService);
 
-  get usernameControl() {
-    return this.form.get('username');
-  }
-  get bioControl() {
-    return this.form.get('password');
-  }
-  get phoneNumberControl() {
-    return this.form.get('confirmPassword');
-  }
-
   form = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.minLength(6)]),
     username: new FormControl('', [
