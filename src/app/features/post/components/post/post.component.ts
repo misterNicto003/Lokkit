@@ -10,6 +10,8 @@ import {
   RelativeDatePipe,
   UserNamePipePipe,
 } from '../../../../shared/shared';
+import { PopupItem } from '../../../../shared/components/pop-up/pop-up.types';
+import { PopUpComponent } from '../../../../shared/components/pop-up/pop-up.component';
 
 @Component({
   selector: 'app-post',
@@ -21,16 +23,29 @@ import {
     HighlightDirective,
     AppShowDirective,
     UserNamePipePipe,
+    PopUpComponent,
   ],
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss',
 })
 export class PostComponent {
   @Input() post!: Post;
-
+  private postService = inject(PostService);
+  public popUpItems!: PopupItem[];
   showComment = false;
 
-  private postService = inject(PostService);
+  ngOnInit() {
+    this.popUpItems = [
+      { label: 'edit', link: ['/post', this.post?._id, 'edit'] },
+      { label: 'setting', link: ['/post', this.post?._id, 'setting'] },
+      {
+        label: 'delete',
+        click: () => this.postService.deletePost(this.post._id),
+      },
+    ];
+
+    console.log(this.popUpItems);
+  }
 
   likePost(postId: number) {
     this.postService.likePost(postId);

@@ -1,0 +1,20 @@
+<div class="popup" (click)="showPopup = !showPopup">
+  <ng-content />
+
+  @if(showPopup){
+  <div class="popup-menu">
+    @for (item of popUpItems; track $index) {
+    <ng-container *ngIf="item.link; else notLink">
+      <a class="popup-menu__item" [routerLink]="item.link">
+        {{ item.label }}
+      </a>
+    </ng-container>
+    <ng-template #notLink>
+      <button class="popup-menu__item" (click)="item.click?.()">
+        {{ item.label }}
+      </button>
+    </ng-template>
+    }
+  </div>
+  }
+</div>

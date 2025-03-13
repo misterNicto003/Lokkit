@@ -5,8 +5,8 @@ import { NotAuthComponent } from './features/auth/layout/not-auth/not-auth.compo
 import { LoginComponent } from './features/auth/page/login/login.component';
 import { RegisterComponent } from './features/auth/page/register/register.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
-import { FeedComponent } from './features/post/pages/feed.component';
 import { ProfileComponent } from './features/profile/profile.component';
+import { FeedComponent } from './features/post/pages/feed/feed.component';
 
 export const routes: Routes = [
   {
@@ -24,6 +24,12 @@ export const routes: Routes = [
           import('./features/profile/profile.routes').then(
             (p) => p.profileRoutes
           ),
+      },
+
+      {
+        path: 'post',
+        loadChildren: () =>
+          import('./features/post/post.routes').then((p) => p.postRoutes),
       },
 
       {

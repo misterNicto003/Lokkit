@@ -19,4 +19,9 @@ export class PostService {
 
     console.log(this.posts);
   }
+
+  deletePost(postId: number) {
+    console.log(`Deleting post ${postId}`);
+    this.posts = this.posts.filter((post) => post._id !== postId);
+  }
 }

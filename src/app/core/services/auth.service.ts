@@ -11,7 +11,7 @@ export class AuthService {
   register() {
     this.route.navigate(['/login']);
 
-    console.log('Пользователь успешно зарегестрирован');
+    console.log('Пользователь  зарегестрирован');
   }
 
   login() {

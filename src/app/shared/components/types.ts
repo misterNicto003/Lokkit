@@ -35,4 +35,5 @@ export type iconTypes =
   | 'Email'
   | 'Unlock'
   | 'UserCircle'
+  | 'Pencil'
   | 'Exit';

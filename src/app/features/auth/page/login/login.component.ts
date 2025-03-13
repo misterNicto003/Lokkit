@@ -19,10 +19,10 @@ import { AuthService } from '../../../../core/services/auth.service';
 })
 export class LoginComponent {
   private authService = inject(AuthService);
-  form: FormGroup;
+  form!: FormGroup;
 
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
+  ngOnInit() {
+    this.form = new FormGroup({
       email: new FormControl('', [
         Validators.required,
         Validators.email,

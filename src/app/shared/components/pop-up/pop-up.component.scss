@@ -1,0 +1,39 @@
+.popup {
+  position: relative;
+
+  &-menu {
+    width: 160px;
+    padding: 10px;
+
+    position: absolute;
+    top: 150%;
+    right: 10px;
+    background-color: var(--iceLilac-color);
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__item {
+      width: auto;
+
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+
+      color: var(--black-color);
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: -0.7%;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      text-align: start;
+
+      &:hover {
+        background-color: var(--gray-color);
+      }
+    }
+  }
+}

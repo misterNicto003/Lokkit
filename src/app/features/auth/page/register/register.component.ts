@@ -25,22 +25,44 @@ import { AuthService } from '../../../../core/services/auth.service';
 export class RegisterComponent {
   private authService = inject(AuthService);
 
-  form: FormGroup;
+  form!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
-    this.form = this.formBuilder.group(
-      {
-        email: [
-          '',
-          [Validators.required, Validators.email, Validators.minLength(6)],
-        ],
-        username: ['', [Validators.required, Validators.minLength(6)]],
-        password: ['', [Validators.required, Validators.minLength(6)]],
-        confirmPassword: ['', [Validators.required]],
-      },
-      { validators: passwordWatchValidator }
-    );
+  get usernameControl() {
+    return this.form.get('username');
   }
+  get bioControl() {
+    return this.form.get('password');
+  }
+  get phoneNumberControl() {
+    return this.form.get('confirmPassword');
+  }
+
+  ngOnInit() {
+    this.form = new FormGroup({
+      email: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6),
+      ]),
+      username: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6),
+      ]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6),
+      ]),
+      confirmPassword: new FormControl('', [Validators.required]),
+    });
+  }
+  //   email: [
+  //     '',
+  //     [Validators.required, Validators.email, Validators.minLength(6)],
+  //   ],
+  //   username: ['', [Validators.required, Validators.minLength(6)]],
+  //   password: ['', [Validators.required, Validators.minLength(6)]],
+  //   ,
+  // },
+  // { validators: passwordWatchValidator }
 
   getErrorMessage(controlName: string): string | null {
     const controle = this.form.get(controlName);
