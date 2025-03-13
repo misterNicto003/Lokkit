@@ -25,8 +25,6 @@ import { AuthService } from '../../../../core/services/auth.service';
 export class RegisterComponent {
   private authService = inject(AuthService);
 
-  form!: FormGroup;
-
   get usernameControl() {
     return this.form.get('username');
   }
@@ -37,23 +35,18 @@ export class RegisterComponent {
     return this.form.get('confirmPassword');
   }
 
-  ngOnInit() {
-    this.form = new FormGroup({
-      email: new FormControl('', [
-        Validators.required,
-        Validators.minLength(6),
-      ]),
-      username: new FormControl('', [
-        Validators.required,
-        Validators.minLength(6),
-      ]),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(6),
-      ]),
-      confirmPassword: new FormControl('', [Validators.required]),
-    });
-  }
+  form = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    username: new FormControl('', [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
+    confirmPassword: new FormControl('', [Validators.required]),
+  });
   //   email: [
   //     '',
   //     [Validators.required, Validators.email, Validators.minLength(6)],
