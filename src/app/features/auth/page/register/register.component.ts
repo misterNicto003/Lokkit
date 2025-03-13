@@ -25,27 +25,25 @@ import { AuthService } from '../../../../core/services/auth.service';
 export class RegisterComponent {
   private authService = inject(AuthService);
 
-  form = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.minLength(6)]),
-    username: new FormControl('', [
-      Validators.required,
-      Validators.minLength(6),
-    ]),
-    password: new FormControl('', [
-      Validators.required,
-      Validators.minLength(6),
-    ]),
-    confirmPassword: new FormControl('', [Validators.required]),
-  });
-  //   email: [
-  //     '',
-  //     [Validators.required, Validators.email, Validators.minLength(6)],
-  //   ],
-  //   username: ['', [Validators.required, Validators.minLength(6)]],
-  //   password: ['', [Validators.required, Validators.minLength(6)]],
-  //   ,
-  // },
-  // { validators: passwordWatchValidator }
+  form = new FormGroup(
+    {
+      email: new FormControl('', [
+        Validators.required,
+        Validators.email,
+        Validators.minLength(6),
+      ]),
+      username: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6),
+      ]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6),
+      ]),
+      confirmPassword: new FormControl('', [Validators.required]),
+    },
+    { validators: passwordWatchValidator }
+  );
 
   getErrorMessage(controlName: string): string | null {
     const controle = this.form.get(controlName);
@@ -63,7 +61,7 @@ export class RegisterComponent {
       } else if (controle.hasError('email')) {
         return 'Please enter a valid email address';
       } else if (controle.hasError('minlength')) {
-        return 'Email must be at least 6 characters long';
+        return 'Minimum 6 characters required';
       }
       return '';
     }
@@ -85,7 +83,7 @@ export class RegisterComponent {
     if (
       controle.touched &&
       controlName === 'confirmPassword' &&
-      this.form.hasError('pass')
+      this.form.hasError('password')
     ) {
       return 'The passwords do not match';
     }

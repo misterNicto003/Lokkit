@@ -19,21 +19,18 @@ import { AuthService } from '../../../../core/services/auth.service';
 })
 export class LoginComponent {
   private authService = inject(AuthService);
-  form!: FormGroup;
 
-  ngOnInit() {
-    this.form = new FormGroup({
-      email: new FormControl('', [
-        Validators.required,
-        Validators.email,
-        Validators.minLength(6),
-      ]),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(6),
-      ]),
-    });
-  }
+  form = new FormGroup({
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email,
+      Validators.minLength(6),
+    ]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
+  });
 
   getErrorMessage(controlName: string): string | null {
     const controle = this.form.get(controlName);
