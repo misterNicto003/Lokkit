@@ -36,4 +36,5 @@ export type iconTypes =
   | 'Unlock'
   | 'UserCircle'
   | 'Pencil'
-  | 'Exit';
+  | 'Exit'
+  | 'Close';

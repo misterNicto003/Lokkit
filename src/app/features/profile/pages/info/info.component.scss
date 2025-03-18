@@ -1,0 +1,50 @@
+.profile {
+  &__section1 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    &--avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+    }
+    &--btns {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      &-btn {
+        padding: 10px 15px;
+        border-radius: 123px;
+
+        background: var(--electricBlue-color);
+        color: var(--white-color);
+      }
+      &-unbtn {
+        padding: 10px 15px;
+        border-radius: 123px;
+
+        background: var(--electricBlue-color);
+        color: var(--white-color);
+      }
+    }
+  }
+
+  &__section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 44px;
+  }
+}
+
+app-info {
+  width: 100%;
+
+  border: 1px solid red;
+}
+
+app-info-form {
+  max-width: 515px;
+  width: 100%;
+}

@@ -1,1 +1,17 @@
-<button>info</button>
+<div class="profile">
+  <div class="profile__section1">
+    <img
+      class="profile__section1--avatar"
+      [src]="userService.activeUser.avatar"
+      alt=""
+    />
+    <div class="profile__section1--btns">
+      <button class="profile__section1--btns-btn">Change Photo</button>
+      <button class="profile__section1--btns-unbtn">Delete</button>
+    </div>
+  </div>
+  <div class="profile__section2">
+    <app-info-form />
+    <app-password-form />
+  </div>
+</div>

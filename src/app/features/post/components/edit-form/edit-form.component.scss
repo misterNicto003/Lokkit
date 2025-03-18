@@ -30,11 +30,17 @@
     line-height: 22px;
     letter-spacing: -0.7%;
 
-    &-input {
+    &__input {
+      padding: 0 10px;
       width: 100%;
     }
   }
 
+  &-error {
+    &__span {
+      color: var(--red-color);
+    }
+  }
   &-btn {
     border-radius: 123px;
     background: var(--electricViolet-color);

@@ -12,6 +12,19 @@ export class PostService {
     this.posts = postsData;
   }
 
+  loadPost() {
+    return this.posts.map((item) => {
+      return {
+        title: item.title,
+        content: item.content,
+      };
+    });
+  }
+
+  public updatePost(data: any) {
+    console.log('This post has been edited:', data);
+  }
+
   likePost(postId: number) {
     this.posts = this.posts.map((post) =>
       post._id === postId ? { ...post, likes: post.likes + 1 } : post

@@ -1,14 +1,68 @@
-<form class="form" action="">
+<form [formGroup]="postForm" class="form" (submit)="onSubmit()" action="">
   <h1 class="form-title">Edit Post</h1>
 
   <label class="form-label" for="">
-    <input class="form-label__input" type="text" placeholder=" Title" />
+    <input
+      class="form-label__input"
+      type="text"
+      placeholder=" Title"
+      formControlName="title"
+    />
     <app-icon [icon]="'Pencil'" />
   </label>
 
+  <div
+    class="form-error"
+    *ngIf="titleControl?.touched && titleControl?.invalid"
+  >
+    <span class="form-error__span" *ngIf="titleControl?.errors?.['required']">
+      the field is required
+    </span>
+    <span class="form-error__span" *ngIf="titleControl?.errors?.['minlength']">
+      minimum length</span
+    >
+  </div>
+
   <label class="form-label" for="">
-    <input class="form-label__input" type="text" placeholder=" Content" />
+    <input
+      class="form-label__input"
+      type="text"
+      placeholder=" Content"
+      formControlName="content"
+    />
     <app-icon [icon]="'Pencil'" />
   </label>
-  <button class="form-btn">eddit Post</button>
+
+  <div
+    class="form-error"
+    *ngIf="contentControl?.touched && contentControl?.invalid"
+  >
+    <span class="form-error__span" *ngIf="contentControl?.errors?.['required']">
+      the field is required
+    </span>
+    <span
+      class="form-error__span"
+      *ngIf="contentControl?.errors?.['minlength']"
+    >
+      minimum length</span
+    >
+    <span class="form-error__span" *ngIf="contentControl?.errors?.['maxlength']"
+      >maximum length
+    </span>
+  </div>
+
+  <div formArrayName="tags">
+    <div *ngFor="let tag of tags.controls; let i = index">
+      <label [for]="'tag-' + 1"> тег {{ i + 1 }} </label>
+      <input [id]="'tag-' + 1" [formControlName]="i" />
+
+      <button type="button" (click)="deleteTag(i)">
+        <app-icon [icon]="'Close'" />
+      </button>
+    </div>
+  </div>
+
+  <button type="button" (click)="addTag()">Добавить тег</button>
+
+  <button type="submit" class="form-btn">eddit Post</button>
 </form>
