@@ -1,13 +1,12 @@
 import { Routes } from '@angular/router';
-import { FeedComponent } from './features/post/pages/feed.component';
-import { UsersComponent } from './features/users/pages/users.component';
-import { ProfileComponent } from './features/profile/profile.component';
+import { auth, notAuth } from './core/guards/auth.guard';
+import { AuthComponent } from './features/auth/layout/auth/auth.component';
+import { NotAuthComponent } from './features/auth/layout/not-auth/not-auth.component';
+import { LoginComponent } from './features/auth/page/login/login.component';
+import { RegisterComponent } from './features/auth/page/register/register.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
-import { auth } from './core/guards/auth.guard';
-import { AuthComponent } from './features/auth/auth.component';
-import { InfoComponent } from './features/profile/pages/info/info.component';
-import { DevicesComponent } from './features/profile/pages/devices/devices.component';
-import { SettingComponent } from './features/profile/pages/setting/setting.component';
+import { ProfileComponent } from './features/profile/profile.component';
+import { FeedComponent } from './features/post/pages/feed/feed.component';
 
 export const routes: Routes = [
   {
@@ -20,12 +19,17 @@ export const routes: Routes = [
         path: 'profile/:id',
         title: 'Profile',
         component: ProfileComponent,
-        canActivateChild: [auth],
-
+        canActivate: [auth],
         loadChildren: () =>
           import('./features/profile/profile.routes').then(
             (p) => p.profileRoutes
           ),
+      },
+
+      {
+        path: 'post',
+        loadChildren: () =>
+          import('./features/post/post.routes').then((p) => p.postRoutes),
       },
 
       {
@@ -35,5 +39,15 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: '**', component: NotFoundComponent },
+  {
+    path: '',
+    component: NotAuthComponent,
+    canActivate: [notAuth],
+    children: [
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
+      { path: 'login', title: 'Login', component: LoginComponent },
+      { path: 'register', title: 'Register', component: RegisterComponent },
+    ],
+  },
+  { path: '**', title: 'Page 404', component: NotFoundComponent },
 ];

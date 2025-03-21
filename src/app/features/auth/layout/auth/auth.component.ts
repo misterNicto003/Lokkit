@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { HeaderComponent, SidebarComponent } from '../../shared/shared';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent, SidebarComponent } from '../../../../shared/shared';
 
 @Component({
   selector: 'app-auth',

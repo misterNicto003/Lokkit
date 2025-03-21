@@ -8,6 +8,25 @@
   border: 1px solid var(--gray-color);
   width: 100%;
 
+  &-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    width: 400px;
+    padding: 8px 16px;
+
+    &:focus-within {
+      border: 1px solid var(--electricBlue-color);
+    }
+
+    input {
+      width: 90%;
+    }
+  }
+
   &-profile {
     display: flex;
     align-items: center;
@@ -22,6 +41,16 @@
         border-radius: 123px;
         border: 1px solid var(--border-color);
       }
+    }
+
+    & button {
+      background-color: #5865f2;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-right: 10px;
     }
 
     &-user {

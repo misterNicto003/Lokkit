@@ -15,7 +15,10 @@
       </div>
     </div>
     <h2>{{ post.createdAt | relativeDate }}</h2>
-    <app-icon class="post__menu-icon" [icon]="'DotsVertical'"></app-icon>
+
+    <app-pop-up [popUpItems]="popUpItems">
+      <app-icon class="post__menu-icon" [icon]="'DotsVertical'"></app-icon>
+    </app-pop-up>
   </div>
 
   <div class="post__content">

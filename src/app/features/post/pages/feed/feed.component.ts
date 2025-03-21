@@ -1,8 +1,8 @@
 import { Component, inject, Input } from '@angular/core';
-import { PostComponent } from '../components/post/post.component';
-import { PostService } from '../../../core/services/post.service';
 import { CommonModule } from '@angular/common';
-import { FrameComponent } from '../../../shared/shared';
+import { PostComponent } from '../../components/post/post.component';
+import { FrameComponent } from '../../../../shared/shared';
+import { PostService } from '../../../../core/services/post.service';
 
 @Component({
   selector: 'app-feed',

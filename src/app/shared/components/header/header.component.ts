@@ -7,7 +7,7 @@ import { UserService } from '../../../core/services/user.service';
 
 @Component({
   selector: 'app-header',
-  imports: [ButtonComponent, InputComponent, IconComponent, RouterLink],
+  imports: [IconComponent, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

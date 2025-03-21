@@ -8,14 +8,21 @@
   top: 0;
   left: 0;
   &-form {
+    display: flex;
+    align-items: center;
+
     border: 1px solid var(--border-color);
     border-radius: 123px;
     padding: 9px 12px;
     margin: 32px 0;
 
     &__input {
-      padding-left: 8px;
       color: var(--475569-color);
+      padding-left: 10px;
+    }
+
+    &__img {
+      width: 20px;
     }
   }
 

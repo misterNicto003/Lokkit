@@ -1,0 +1,56 @@
+.form {
+  padding: 15px;
+
+  width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  background: var(--white-color);
+  border-radius: 20px;
+  &-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 22px;
+    letter-spacing: -0.7%;
+  }
+
+  &-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 123px;
+    background: var(--background2);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.7%;
+
+    &__input {
+      padding: 0 10px;
+      width: 100%;
+    }
+  }
+
+  &-error {
+    &__span {
+      color: var(--red-color);
+    }
+  }
+  &-btn {
+    border-radius: 123px;
+    background: var(--electricViolet-color);
+    color: var(--white-color);
+
+    padding: 10px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.7%;
+  }
+}
